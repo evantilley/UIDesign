@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <script src = "https://code.jquery.com/jquery-3.3.1.min.js"
+        crossorigin="anonymous"> </script>
+    </head>
+
+    <style>
+        table, td, tr{
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        .red{
+            color: red;
+        }
+
+        .bold{
+            font-weight: bold;
+        }
+
+        .light-gray{
+            color: lightgray;
+        }
+
+    </style>
+
+
+    <script>
+        var chars = 30
+        var name = "etills"
+
+        $(document).ready(function(){
+
+
+            $("#characters-remaining").html(chars).addClass("light-gray")
+
+            //need to implement enter functionality
+
+            $("#post-tweet").click(function(){
+                tweet = $("#input_field").val()
+                tweet = tweet.replace(/\s/g, "&nbsp;"); //credit to Prof. Chilton's Piazza Post
+                if($.trim( $('#input_field').val() ) == ''){
+
+                } else{
+                var code = "<tr><td> <b>" + name + "</b>:" + "         " + tweet + "</td></tr>"
+                table = $("table").prepend(code)
+                $("#input_field").val('').focus()
+                chars = 0
+                $("#characters-remaining").html(30 - chars)
+                $("#post-tweet").attr("disabled", true)
+                }
+            })
+
+            $(document).on("keypress", "input", function(e){
+                if (e.which == 13 && $("#post-tweet").attr("disabled") != "disabled" ) {
+                    tweet = $("#input_field").val()
+                    tweet = tweet.replace(/\s/g, "&nbsp;"); //credit to Prof. Chilton's Piazza Post
+                    if($.trim( $('#input_field').val() ) == ''){
+
+                    } else{
+                    var code = "<tr><td> <b>" + name + "</b>:" + "         " + tweet + "</td></tr>"
+                    table = $("table").prepend(code)
+                    $("#input_field").val('').focus()
+                    chars = 0
+                    $("#characters-remaining").html(30 - chars)
+                    $("#post-tweet").attr("disabled", true)
+                    }
+                }
+            });
+
+            $("#input_field").val('').focus()
+
+            $("#input_field").keydown(function(){
+                chars =  $(this).val().length
+                if(chars > 30){
+                    $("#post-tweet").attr("disabled", true)
+                } else{
+                    $("#post-tweet").attr("disabled", false)
+                }
+                $("#characters-remaining").html(30 - chars)
+                if (chars > 30){
+                    $("#characters-remaining").removeClass("light-gray")
+                    $("#characters-remaining").addClass("bold red")
+                } else{
+                    $("#characters-remaining").removeClass("bold red")
+                    $("#characters-remaining").addClass("light-gray")
+                }
+            })
+
+            $("#input_field").keyup(function(){
+                chars =  $(this).val().length
+                if(chars > 30){
+                    $("#post-tweet").attr("disabled", true)
+                } else{
+                    $("#post-tweet").attr("disabled", false)
+                }
+                $("#characters-remaining").html(30 - chars)
+                if (chars > 30){
+                    $("#characters-remaining").removeClass("light-gray")
+                    $("#characters-remaining").addClass("bold red")
+                } else{
+                    $("#characters-remaining").removeClass("bold red")
+                    $("#characters-remaining").addClass("light-gray")
+                }
+            })
+
+        })
+    </script>
+
+    <body>
+        <span class = "bold">Write a Tweet</span> <br>
+        <input type="text" id="input_field"> <br>
+        <span id = "characters-remaining">chars_remaining</span> 
+        <button id = "post-tweet">Post Tweet</button>
+        <table id="table">
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,384 @@
+<html>
+    <head>
+        <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+integrity="sha384-
+GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+crossorigin="anonymous">
+
+    <style>
+
+        .blue{
+            background-color: lightblue;
+        }
+
+        .override{
+            margin-left: 30px;
+        }
+        .margins{
+            margin-left: 100px;
+        }
+        .gray{
+            color: gray;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .small{
+            font-size: 14px;
+        }
+        .top-margin{
+            margin-top: 10px;
+        }
+        .bottom-margin{
+            margin-bottom: 10px;
+        }
+
+        .img-responsive {
+        width: 100%;
+        }
+
+        .padding{
+        padding-right:2px;
+        padding-left:0;
+        }
+
+        .extra-padding{
+            padding-right:2.5px;
+        padding-left:0;
+        }
+        .right-padding{
+            padding-right: 10px;
+        }
+
+        .auto-margins{
+            margin:auto;
+        }
+
+        .no-left-margin{
+            margin-left: 0px;
+        }
+        .no-right-margin{
+            margin-right: 0px;
+        }
+        body{
+            margin: 0;
+        }
+        .small-bottom-margin{
+            margin-bottom: 2px;
+        }
+        .nav-left-margin{
+            margin-left: 40px;
+        }
+        .nav-right-margin{
+            margin-right: 20px;
+        }
+        .nav-top-margin{
+            margin-top: 10px;
+        }
+        .nav-bottom-margin{
+            margin-bottom: 5px;
+        }
+        .no-left-padding{
+            padding-left: 0px;
+        }
+        .no-right-padding{
+            padding-right: 0px;
+        }
+        .img-right-margin{
+            margin-right: 20px;
+        }
+        .img-bottom-margin{
+            margin-bottom: 10px;
+        }
+        .main-hr{
+            height: 1px;
+            background-color: lightblue;
+            margin-top: 10px;
+            width: 100%;
+            border: none;
+        }
+        .main-hr-2{
+            height: 2px;
+            background-color: lightblue;
+            width: 100%;
+            border: none;
+            padding-right: 0%;
+        }
+        .main-hr-3{
+            height: 2px;
+            background-color: lightblue;
+            width: 100%;
+            border: none;
+            padding-right: 25%;
+        }
+        .no-bottom-margin{
+            margin-bottom: 0px;
+        }
+        .container-fluid {
+        padding-bottom: 0;
+        margin-bottom:0;
+        height: 100%;
+        }
+        .white{
+            background-color: white;
+        }
+        .text-left-margin{
+            margin-left: 5px;
+        }
+        .img-width{
+            width: 30%;
+            height: auto;
+        }
+        .button-height{
+            height: 15px;
+        }
+        .no-top-padding{
+            padding-top: 0px;
+        }
+        .no-top-margin{
+            margin-top: 0px;
+        }
+        .bottom-padding{
+            padding-bottom: 30px;
+        }
+        .less-bottom-padding{
+            padding-bottom: 20px;
+        }
+
+        .small-font{
+            font-size: 3px;
+        }
+        .height{
+            height: auto;
+        }
+        .image-size{
+            height: 40%;
+            width: 40%;
+        }
+        .override-padding-left{
+            padding-left: 100px;
+        }
+        .override-padding-right{
+            padding-right: 100px;
+        }
+
+        .resize{
+            max-height: auto;
+            max-width: 100%;
+
+        }
+        .text-bottom-padding{
+            padding-bottom: 15px;
+        }
+        .test-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .inline{
+            display: inline-block;
+        }
+        .block{
+            display: block;
+        }
+        .large-top-margin{
+            margin-top: 40px;
+        }
+        .no-bottom-padding{
+            padding-bottom: 0px;
+        }
+        .dark-blue{
+            color: blue;
+        }
+        .move-left{
+            position: relative;
+            left: 15%;
+        }
+
+        .add-vertical-space{
+            height: 42%;
+        }
+        .move-little-left{
+            position: relative;
+            left: 4%;
+        }
+        .move-more-left{
+            position: relative;
+            left: 18%;
+        }
+        .rescale{
+            width: 95%;
+            height: auto;
+        }
+        .add-padding-right{
+            padding-right: 25px;
+        }
+        .spacer2{
+            height: 8px;
+        }
+
+
+    </style>
+
+    <body>
+        <div class = "container-fluid">
+        <div class = "row">
+        <div class = "col-md-3 blue height override-padding-left override-margin-left add-padding-right">
+            <!-- when to make this a row vs just normal-->
+            <div>
+                <div class = "spacer2"></div>
+                <span> <!-- check on text wrapping-->
+                    Columbia University
+                </span> <br>
+                <span class = "gray small">
+                    @Columbia
+                </span> <br>
+                <button type="button" class = "top-margin bottom-margin">Tweet to Columbia</button>
+
+                <div class = "row no-left-margin no-right-padding small-bottom-margin">
+                    <span class = "col-md-4 padding">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid">
+                    </span>
+                    <div class = "col-md-4 padding">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid">
+                    </div>
+                    <div class = "col-md-4 padding">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid">
+                        
+                    </div>
+                </div>
+
+                <div class = "row no-left-margin no-right-padding">
+                    <span class = "col-md-4 padding">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid">
+                    </span>
+                    <div class = "col-md-4 padding">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid">
+                    </div>
+                    <div class = "col-md-4 padding">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "col-md-6 no-left-padding no-right-padding">
+                <div class = "row">
+                    <div class="nav-left-margin nav-right-margin nav-top-margin nav-bottom-margin bold">
+                        Tweets
+                    </div>
+                    <div class="nav-left-margin nav-right-margin nav-top-margin nav-bottom-margin bold">
+                        Media
+                    </div>
+                    <div class="nav-left-margin nav-right-margin nav-top-margin nav-bottom-margin bold">
+                        Other
+                    </div>
+                    <div class="nav-left-margin nav-right-margin nav-top-margin nav-bottom-margin bold">
+                        Other2
+                    </div>
+
+                    <hr class = "main-hr">
+                </div>
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <div class = "row">
+                    <div class = "col-md-2 text-center">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid move-left">
+                    </div>
+                    <div class = "col-md-10">
+                        <span class = "bold"> Columbia University</span> <br>
+                        <span> Groundbreaking. Beautiful. Monumental. More text. Read this. Lots to read.</span> <br>
+                        <span> Lorem ipsum. Get it to break the line. Must use up 3 lines. what else can I say?</span> <br>
+                        <span> #threelines</span> <br>
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid rescale">
+                    </div>
+                </div>
+                </div>
+                </div>
+                <hr class = "main-hr-2">
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <div class = "row">
+                    <div class = "col-md-2 text-center">
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-fluid move-left">
+                    </div>
+                    <div class = "col-md-10">
+                        <span class = "bold"> Columbia University</span> <br>
+                        <span> Groundbreaking. Beautiful. Monumental. More text. Read this. Lots to read.</span> <br>
+                        <span> Lorem ipsum. Get it to break the line. Must use up 3 lines. what else can I say?</span> <br>
+                        <span> #threelines</span>
+                        <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "rescale">
+                        <div class = "white">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+        </div>
+        <div class = "col-md-3 blue override-padding-right padding-top">
+            <div class = "white">
+                <div class = "text-left-margin text-bottom-padding">
+
+                    <div class = "spacer2">
+
+                    </div>
+                    <span class = "bold">Who to follow</span>
+                </div>
+                <div>
+                    <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-width bottom-margin move-little-left">
+                    <div class = "inline">
+                        <div class = "block move-more-left">
+                            <span>Columbia</span> 
+                        </div>
+                        <div class = "block move-more-left">
+                            <button>Follow</button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-width bottom-margin move-little-left">
+                    <div class = "inline no-top-margin no-top-padding">
+                        <div class = "block move-more-left">
+                            <span>Columbia</span> 
+                        </div>
+                        <div class = "block move-more-left">
+                            <button>Follow</button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class = "less-bottom-padding">
+                    <img src = "http://coms4170.cs.columbia.edu/2020-spring/hw/hw2/columbia.jpg" class = "img-width bottom-margin move-little-left">
+                    <div class = "inline no-top-margin no-top-padding">
+                        <div class = "block move-more-left">
+                            <span>Columbia</span> 
+                        </div>
+                        <div class = "block move-more-left">
+                            <button>Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+               &nbsp;
+            </div>
+            <div class = "white">
+                <span class = "bold move-little-left">Trends for you!</span> <br>
+                <div class = "spacer2">
+                </div>
+                <span class = "dark-blue bold move-little-left">#COMS4170</span> <br>
+                <span class = "gray small move-little-left">45 million tweets</span> <br>
+                <div class = "spacer2"></div>
+                <span class = "dark-blue bold move-little-left">#COMS6889-08</span> <br>
+                <span class = "gray small move-little-left">35 million tweets</span>
+                <div class = "spacer2"></div>
+                <div class = "spacer2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
