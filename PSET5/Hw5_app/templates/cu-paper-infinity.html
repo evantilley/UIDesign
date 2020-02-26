@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <!--took this import line for jquery from https://flask.palletsprojects.com/en/1.1.x/patterns/jquery/
+        since I was having problems with importing jquery-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'infinity.js') }}"></script>
+        <script>
+            var data = {{data|tojson}} 
+            var clients_global = {{clients|tojson}}
+        </script>
+
+        <style>
+            .light-gray{
+                background-color: lightgray;
+            }
+            .header-height{
+                height: 15%;
+            }
+            .center{
+                margin:auto;
+            }
+            .large-font{
+                font-size: x-large;
+            }
+            .bold{
+                font-weight: bold;
+            }
+            .smaller-width{
+                width: 90%;
+            }
+            .max-width{
+                width: 100%;
+            }
+            .left-padding{
+                padding-left: 30px;
+            }
+            .top-padding{
+                padding-top: 30px;
+            }
+            .blue{
+                background-color: blue;
+            }
+            .red{
+                color: red;
+            }
+            .auto{
+                width:auto;
+            }
+            .smaller{
+                max-width: 155%;
+            }
+            .smaller-font{
+                padding-right: 0px;
+                padding-left: 0px;
+                font-size: 16px;
+            }
+            .gray-background{
+                background-color: lightgray;
+            }
+        </style>
+
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    </head>
+        <body>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-12 gray-background">
+                    <div class = " light-gray header-height left-padding top-padding large-font bold">Columbia Paper Infinity
+                    </div>
+                </div>
+                </div>
+                <div class = "row">
+                    &nbsp;
+                </div>
+                <div class = "row">
+                    <div class = "col-md-8">
+                        <div class = "row">
+                        <div class = "col-md-3">
+                        </div>
+                        <div class = "col-md-6" id = "client-warning">
+                        
+                        </div>
+                        <div class = "col-md-2" id = "reams-warning">
+                                
+                        </div>
+                        <div class = "col-md-1">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div class = "col-md-4">
+
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-md-8">
+                        <div class = "row">
+                            <div class = "col-md-3">
+                                <span>Log your paper sales:</span>
+                            </div>
+                            <div class = "col-md-6">
+                                <input type="text" id = "client" class = "smaller-width" placeholder = "client">
+                            </div>
+                            <div class = "col-md-2">
+                                <input type="text" id = "reams" class = "smaller-width" placeholder = "# reams">
+                            </div>
+                            <div class = "col-md-1">
+                                <button type="button" id = "submit" class="btn btn-primary smaller-font">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-md-4">
+
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-md-8" id = "entries">
+
+                    </div>
+                    <div class = "col-md-4">
+
+                    </div>
+                </div>
+                <!--insert new rows here-->
+            </div>
+
+        </body>
+</html>
+
