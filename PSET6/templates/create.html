@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Create Mushroom Entry</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'create.js') }}"></script>
+        <script>
+            var mushrooms = {{mushrooms|tojson}} 
+        </script>
+    </head>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 6vh;
+        }
+        .red{
+            color: red
+        }
+        .small{
+            font-size: 1.5vh;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <span class = "bold large">Create A Mushroom Entry!</span> <br>
+                    <span class = "bold red">NOTE:</span>
+                    <span class = "red">Please make sure your entry is accurate. We pride ourselves on the accuracy of our database. Consequently, we have thousands of moderators who will remove any invalid entries.</span>
+                </div>
+            </div> <br> 
+            <div class = "row">
+                <div class = "col-md-12">
+                    <span class = "bold">Species:</span> <br>
+                    <input type="text" id = "species" placeholder = "Species:"> <br> <br> <br>
+
+                    <span class = "bold">Image Link:</span> <br>
+                    <input type = "text" id = "image" placeholder = "Image Link:"> <br> <br> <br>
+
+                    <span class = "bold">Edible:</span> <br>
+                    <input type = "text" id = "edible" placeholder = "Edible:"> <br> <br> <br>
+
+                    <span class = "bold">Approx. Cap Size (in.):</span> <br>
+                    <input type = "text" id = "cap-size" placeholder = "Cap Size:"> <br> <br> <br>
+
+                    <span class = "bold">Common Names:</span> <br>
+                    <span class = "small">For multiple names, enter as a comma-separated list (with spaces in between commas)</span>
+                    <div class = "buttons">
+                        <input type = "text" id = "common-names" placeholder = "Common Name:">
+                        <!--
+                         <button type = "button" id = "add-button" class = "btn btn-primary">+</button>
+                         <div class = "new-buttons">
+
+                         </div>
+                         -->
+                    </div>
+                    <br> <br> <br>
+
+                    <span class = "bold">Information:</span> <br>
+                    <input type = "text" id = "info" placeholder = "Info:"> <br> <br> <br>
+
+                    <span class = "bold">Comment:</span> <br>
+                    <input type = "text" id = "comment" placeholder = "Comment:"> <br> <br> <br>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <div class = "warning red">
+
+                    </div>
+                    <button type="button" id = "submit" class="btn btn-primary smaller-font">Submit</button>
+                    <div class = "col-md-12 text-center new-shroom">
+
+                    </div> 
+                </div>
+            </div> <br> <br> <br> <br>
+        </div>
+    </body>
+</html>

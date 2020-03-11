@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Mushrooms</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
+        <script>
+            var mushrooms = {{mushrooms|tojson}}
+            var source = {{source|tojson}} 
+        </script>
+    </head>
+    <style>
+        .green{
+            background-color:#88fc03;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 6vh;
+        }
+        .semi-large{
+            font-size: 4vh;
+        }
+        .mildly-large{
+            font-size: 3vh;
+        }
+        .red{
+            color: red;
+        }
+
+        .red-back{
+            background-color: red;
+            margin-top: 18%;
+        }
+        .dark-red{
+            color: darkred;
+        }
+        .scale{
+            width: 80%;
+            height: auto;
+        }
+        .back-pink{
+            background-color: pink;
+        }
+        .back-purple{
+            background-color: #ff59de;
+        }
+        .back-green-light{
+            background-color: #a3ff75
+        }
+        .mushroom-row{
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+        .dark-green{
+            color: darkgreen
+        }
+    </style>
+            <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <body>
+        <div class = "container">
+            <div class = "row text-center">
+                <div class = "green bold large col-md-12">
+                    <span>Mushroom Database!</span>
+                </div>
+            </div> <br> <br> <br>
+            <div class = "row">
+                <div class = "text-center col-md-12">
+                    <span class = "bold mildly-large">Scroll Down to Search For a Mushroom (Or add your own)!</span>
+                </div>
+            </div> <br> <br>
+            <div class = "row">
+                <div class = "col-md-6">
+                    <span>Welcome to the database of mushrooms!</span> <br>
+                    <span>This database contains over 30 entries of various mushrooms!</span> <br>
+                    <span>Curious about a mushroom you found in your backyard? Want to know what that cool glowing mushroom you saw in the forest was? We have everything you need!</span> <br> <br>
+                    <span class = "bold semi-large">Some features that distinguish us from other mushroom databases:</span> <br>
+                    <span class = "bold mildly-large">1. Edibility</span> <br>
+                    <span>We provide information on whether a mushroom is edible or not</span> <br>
+                    <span class = "red bold">NOTE: Please always exercise caution when deciding to ingest a mushroom! Just because a mushroom IS edible, doesn't necessarily mean you should consume it! Always follow preparation instructions.</span> <br>
+                    <span class = "dark-red bold">Also Note: We have taken the liberty of classifying hallucinogenic mushrooms as edible, but they are illegal in many regions. Please only consume if advised by a medical professional.</span> <br> <br>
+                    <span class = "bold mildly-large">2. Pictures</span> <br>
+                    <span>Our website provides nice pictures of each mushroom so you can easily identify them!</span> <br> <br>
+                    <span class = "bold mildly-large">3. Common Names</span> <br>
+                    <span>In addition to the scientific name of each mushroom, we also provide common names. This way, you can use the correct mushroom terminology in day-to-day conversation!</span> <br>
+                </div>
+                <div class = "col-md-6">
+                    <img class = "scale" src = https://i.pinimg.com/originals/68/e1/19/68e1194d77be80363a6eb105adcd58a6.jpg>
+                    &nbsp; <br>
+                    <img class = "scale" src = https://i.pinimg.com/originals/17/5e/71/175e710b2eba3510aa0a6f39225c3c39.jpg>
+                </div>
+            </div> <br> <br> <br> <br>
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <span class = "green bold">
+                        Add a New Mushroom to the Site!
+                    </span> <br>
+                    <a href = "/create" class = "btn btn-secondary">Add new shroom!</a>
+                </div>
+            </div> <br> <br> <br>
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <span class = "bold semi-large">Search for a mushroom below!</span> <br> <br>
+                    <span>Click on the row that appears in the table to view information about the mushroom!</span> <br>
+                    <span class = "bold">Don't know which mushroom to search?</span> <br>
+                    <span>No worries! Press the search button with an empty input and all the mushrooms will appear!</span>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <input type="text" id = "query" placeholder = "Mushroom Name:">
+                    <button type="button" id = "submit" class="btn btn-primary smaller-font">Submit</button>
+                </div>
+            </div>
+            <br>
+
+            <br>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <div id = "results">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+    </body>
+
+</html>
