@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<html>
+    <head>
+        <title>Columbia Tunneler</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'map.js') }}"></script>
+    </head>
+
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 3vh
+        }
+        .scale-logo{
+            width: 60%;
+            height: auto;
+        }
+        
+    </style>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12 text-center large bold">
+                    Map
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-4">
+                    <span class = "bold">Red line: </span> <span>Confirmed</span> <br>
+                    <span class = "bold">Yellow line: </span> <span>Almost Certainly Exists</span> <br>
+                    <span class = "bold">Green line: </span> <span>Holy Grail</span> <br>
+                </div>
+                <div class = "col-md-8">
+                    <img src = "static/images/holy_grail.png">
+                </div>
+            </div> <br> <br>
+            <div class = "row">
+                <div class = "text-center col-md-6">
+                    <a type="button" href = '/quiz' id = "continue" class="btn btn-primary">Quiz</a>
+                </div>
+                <div class = "text-center col-md-6">
+                    <a type="button" href = '/tuns1' id = "continue" class="btn btn-primary">Enter</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

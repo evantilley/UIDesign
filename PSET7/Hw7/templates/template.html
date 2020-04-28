@@ -1,0 +1,148 @@
+<script>
+    var mushroom = {{mushroom|tojson}}
+    var mushrooms = {{mushrooms|tojson}}
+    var source = {{source|tojson}} 
+</script>
+{% extends "layout.html" %}
+
+{% block content %}
+<html>
+    <head>
+        <title>Info</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'templates.js') }}"></script>
+        <script>
+            var mushroom = {{mushroom|tojson}}
+        </script>
+    </head>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .large-font{
+            font-size: 6vh;
+        }
+        .semi-large{
+            font-size: 3vh;
+        }
+        .mildly-large{
+            font-size: 2.5vh;
+        }
+        .blue{
+            color: blue;
+        }
+        .red{
+            color: white;
+            background-color: red;
+        }
+        .add-commment{
+            cursor: pointer;
+        }
+        .scale{
+            height: 300px;
+        }
+        .small{
+            scale: 30%;
+        }
+        .red-text{
+            color: red
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+
+    <body>
+        <div class = "container">
+            <br>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <span class = "blue bold back semi-large">
+                        <a href = "/"></a>
+                    </span>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <div class = "species bold large-font">
+
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <div class = "image">
+
+                    </div>
+                </div>
+            </div> <br>
+            <div class = "row">
+                <div class = "col-md-6 edible text-center">
+
+                </div>
+                <div class = "col-md-6 capsize text-center">
+
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12 common-names">
+
+                </div>
+            </div> <br>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <span class = "bold mildly-large">Info:</span>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-10 info">
+                    
+                </div>
+                <div class = "col-md-2 editing-buttons">
+                    <div class = "edit-button">
+                        <button class = "btn btn-primary" id = "edit-info">&#9999; Edit</button>
+                    </div>
+                    
+                    <div class = "submit-changes">
+
+                    </div>
+                    <div class = "discard-changes">
+
+                    </div>
+                </div>
+            </div> <br>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <span class = "bold mildly-large">Comments:</span>
+                </div>
+            </div>
+            <div class = "comments">
+            </div>
+            <div class = "row">
+                <div class = "col-md-12"> <br>
+                    <div class = "red-text" id = "empty-comment-warning">
+                        
+                    </div>
+                    <span class = "blue bold hover-text mildly-large add-comment">Add Comment</span>
+                    <div id = "textbox">
+
+                    </div>
+                    <span id = "new-comment-button">
+
+                    </span>
+
+                    <span id = "delete-comment-button">
+
+                    </span>
+                </div>
+            </div>
+    </body> <br> <br>
+    {% endblock %}
+</html>

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<html>
+    <head>
+        <title>Columbia Tunneler</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
+    </head>
+
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 3vh
+        }
+        .scale-logo{
+            width: 60%;
+            height: auto;
+        }
+        
+    </style>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12 text-center large bold">
+                    Columbia Tunneler
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-4">
+                    <img class = "scale-logo" src = "/static/images/logo_columbia.png">
+                </div>
+                <div class = "col-md-8">
+                    Tired of searching through WikiCU and Reddit for hours only to find outdated information about the Columbia tunnel system? No need to worry, Columbia Tunneler has just what you need!
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "text-center col-md-12">
+                    <a href = '/map' id = "continue" class="btn btn-primary">Continue</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

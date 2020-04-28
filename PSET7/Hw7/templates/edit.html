@@ -1,0 +1,68 @@
+<script>
+    var mushrooms = {{mushrooms|tojson}}
+    var source = {{source|tojson}} 
+</script>
+{% extends "layout.html" %}
+
+{% block content %}
+<html>
+    <head>
+        <title>Edit</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script>
+            var mushroom = {{mushroom|tojson}}
+            var source = {{source|tojson}} 
+        </script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+
+    </head>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 6vh;
+        }
+        .semi-large{
+            font-size: 4vh;
+        }
+        .red{
+            color: red
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <span class = "bold large">Add A Comment!</span>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <span class = "bold semi-large">Current Comments:</span>
+                    <div class = "comments">
+
+                    </div>
+                </div>
+            </div> <br> <br>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <div class = "warning red bold"></div>
+                    <input type = "text" id = "new-comment" placeholder="Enter Comment:"> <br> <br>
+                    <div class = "btn btn-primary" id = "add-comment">Submit Comment</div>
+                    <div class = "btn btn-primary" id = "discard-comment">Discard Changes</div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>

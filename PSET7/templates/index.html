@@ -1,0 +1,135 @@
+<script>
+        var mushrooms = {{mushrooms|tojson}}
+        var source = {{source|tojson}} 
+</script>
+{% extends "layout.html" %}
+
+{% block content %}
+<html>
+    <head>
+        <title>Mushrooms</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
+        <script>
+            var mushrooms = {{mushrooms|tojson}}
+            var source = {{source|tojson}} 
+        </script>
+    </head>
+    <style>
+        .green{
+            color: green;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 6vh;
+        }
+        .semi-large{
+            font-size: 4vh;
+        }
+        .mildly-large{
+            font-size: 3vh;
+        }
+
+
+        .red{
+            color: red;
+        }
+
+        .red-back{
+            background-color: red;
+            margin-top: 18%;
+        }
+        .dark-red{
+            color: darkred;
+        }
+        .scale{
+            width: 80%;
+            height: auto;
+        }
+        .back-pink{
+            background-color: pink;
+        }
+        .back-purple{
+            background-color: #ff59de;
+        }
+        .back-green-light{
+            background-color: #a3ff75
+        }
+        .mushroom-row{
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+        .dark-green{
+            color: darkgreen
+        }
+        .resize{
+            height: 50%;
+            width: auto;
+        }
+        .resize-image{
+            height: 300px;
+            width: auto;
+        }
+        .no-margin{
+            margin: 0;
+            padding: 0;
+        }
+        .pointer{
+            cursor: pointer;
+        }
+    </style>
+            <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <body>
+
+        <div class = "container">
+            <div class = "row">
+                <div class = "bold large col-md-12 text-center">
+                    <span class = "green">ShroomBase</span>
+                </div>
+            </div> <br>
+            <div class = "row">
+                <div class = "col-md-6">
+                    <span class = "bold semi-large">Our Mission</span> <br>
+                    <span>ShroomBase is a dynamic mushroom database that is indended for a variety of individuals,
+                        from those who have stumbled upon a mushroom in the wild and want to learn more about it, to
+                        experienced shroomers who want to learn more about their favorite mushroom! 
+                    </span> <br> <br>
+                    <span>At ShroomBase, we're committed to accurate, up-to-date information and have a team of around-the-clock
+                        mycologists who constantly monitor the database to ensure the verity of mushroom entrees.</span>
+                </div>
+                <div class = "col-md-6 text-center">
+                    <img class = "resize-image" src = "/static/images/huggymushroom.png" alt = "cute mushroom">
+                </div>
+            </div> <br> <br>
+
+            <div class = "row">
+                <div class = "col-md-6">
+                    <span class = "bold mildly-large">12 latest entries to the ShroomBase:</span> <br> <br>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <div class = "latest-entries">
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            {% endblock %}
+    </body>
+
+</html>

@@ -1,0 +1,83 @@
+<html>
+  <html>
+    <head>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
+        <script>
+            var mushrooms = {{mushrooms|tojson}}
+            var source = {{source|tojson}} 
+        </script>
+
+    </head>
+    <style>
+      .bold{
+        font-weight: bold;
+      }
+
+      .normal{
+        font-weight: normal;
+      }
+
+      .large-font{
+        font-size: 4vh;
+      }
+      .semi-large-font{
+        font-size: 3.6vh;
+      }
+      .center{
+        margin: auto;
+      }
+      .background-color{
+        background-color: #FFD799 ;
+      }
+      .small{
+        scale: 90%;
+      }
+      .top-padding{
+        margin-top: 5.5px;
+      }
+      .contrast{
+        color: black
+      }
+      .gray{
+            color: #827a7c !important
+        }
+        .mildly-large-font{
+        font-size: 2.8vh;
+      }
+    </style>
+
+<body>
+<div class = "container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link bold semi-large-font contrast" href="/">ShroomBase</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link bold top-padding gray mildly-large-font" href="/create">Create</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id = "query">
+        <a class="btn btn-outline-success my-2 my-sm-0" id = "search">Search</a>
+      </div>
+    </div>
+  </nav>
+</div>
+  <div class = "container">
+    {% block content %}
+    
+    {% endblock %}
+</div>
+</body>
+</html>

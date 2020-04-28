@@ -1,0 +1,71 @@
+<script>
+    var mushrooms = {{mushrooms|tojson}} 
+    var source = {{source|tojson}}
+    var search_term = {{search_term|tojson}}
+</script>
+{% extends "layout.html" %}
+
+{% block content %}
+<html>
+    <head>
+        <title>Mushrooms</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'search.js') }}"></script>
+        <script>
+            var mushrooms = {{mushrooms|tojson}} 
+            var source = {{source|tojson}}
+            var search_term = {{search_term|tojson}}
+        </script>
+    </head>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .semi-bold{
+            font-weight: 500;
+        }
+        .large{
+            font-size: 6vh;
+        }
+        .semi-large{
+            font-size: 140%;
+        }
+        .resize-image{
+            height: 350px;
+        }
+        .pointer{
+            cursor: pointer;
+        }
+
+        .highlight{
+        background-color: #fff868;
+        }
+        .left-padding{
+            padding-left: 20px;
+        }
+    </style>
+    <body>
+        <div class = "">
+            <div class = "row">
+                <div class = "col-md-12 text-center">
+                    <span class = "bold large">ShroomBase Results:</span> <br>
+                </div>
+            </div>
+            <div class = "row" id = "number">
+            </div>
+            <div  id = "results">
+
+            </div>
+        </div>
+    </body>
+
+</html>
+{% endblock %}

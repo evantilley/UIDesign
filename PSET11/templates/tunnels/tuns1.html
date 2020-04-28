@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<html>
+    <head>
+        <title>Columbia Tunneler</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 6vh
+        }
+        .scale-image{
+            width: 60%;
+            height: auto;
+        }
+        .left-margin{
+            margin-left: 25%;
+        }
+        
+    </style>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12 text-center large bold">
+                    Philosophy
+                </div>
+            </div> <br> <br>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-4">
+                        <span>There are so many tunnels to explore at Columbia! A good place to start for an introductory tour is the Philosphy tunnels.</span> <br>
+                        <span>The maroon star on the map marks your current location.</span>
+                    </div>
+                    <div class = "col-md-8">
+                        <img class = "scale-image left-margin" src = "static/images/maps1.png">
+                    </div>
+                </div> <br> <br>
+            <div class = "row">
+                <div class = "text-center col-md-12">
+                    <a href = '/tunnel' id = "continue" class="btn btn-primary">Enter the Philosophy Tunnels</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

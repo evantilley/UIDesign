@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<html>
+    <head>
+        <title>Columbia Tunneler</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'tunnel.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
+    </head>
+
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .large{
+            font-size: 6vh
+        }
+        .scale-image{
+            width: 90%;
+            height: auto;
+        }
+        .scale-image1{
+            width: 50%;
+            height: 50%;
+        }
+        .left-margin{
+            margin-left: 25%;
+        }
+        .right{
+            right: -250px;
+        }
+        
+            .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+        }
+        
+    </style>
+    <body>
+        <div class = "container">
+            <div class = "row" id = "title">
+
+            </div>
+            <div class = "row" id = "template">
+
+            </div>
+            <div class = "row" id = "continue">
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}
